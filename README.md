@@ -2,8 +2,9 @@ PDFab
 =====
 
 A tool for generating many PDFs from an SVG image template and a bunch of data.
-The simplest example of this is to generate a bunch of name badges for a
-conference.
+For example: this can be used to generate a bunch of name badges for a
+conference (including supporting things like toggling special flair for
+sponsors).
 
 This is somewhat similar to Word's mail merge feature.
 
@@ -28,6 +29,16 @@ This can be carefully written to avoid being eaten by Inkscape by using comments
     <!-- {% if show_layer %} -->
     <g […] />
     <!-- {% endif %} -->
+
+Example
+-------
+
+To run the example, simply do:
+
+    ./pdfab.py test/namecard.svg test.json
+
+This will look for `namecard.svg` in the `test/templates/` directory (this is a
+Jinja2 thing) and generate a PDF for every item in the `test.json` file.
 
 License
 -------

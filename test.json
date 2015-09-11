@@ -6,5 +6,8 @@
     { "name": "Alice Carroll",
         "title": "Hacker",
         "age": 23
+    },
+    { "name": "Dade Murphy",
+        "title": "Zero Cool"
     }
 ]
