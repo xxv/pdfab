@@ -1,0 +1,10 @@
+[
+    { "name": "Steve Pomeroy",
+        "title": "Software Engineer",
+        "age": 34
+    },
+    { "name": "Alice Carroll",
+        "title": "Hacker",
+        "age": 23
+    }
+]
