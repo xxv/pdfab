@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 
-from pdfab import PDFab
-import sys
-
-import json
 from pathlib import Path
-
+from pdfab import PDFab
+import json
+import sys
 
 svg_path = Path(sys.argv[1])
 p = PDFab(svg_path.parent.as_posix(), svg_path.name)
