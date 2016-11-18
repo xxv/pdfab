@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 
-from jinja2 import Environment, PackageLoader
 from tempfile import NamedTemporaryFile
 import subprocess
 
 #####################################################################
 
 class PDFab:
-    def __init__(self, package, svg_file, export_dpi=300):
+    def __init__(self, environment, svg_file, export_dpi=300):
         self.svg_file = svg_file
-        self.env = Environment(loader = PackageLoader(package))
+        self.env = environment
         self.template = self.env.get_template(svg_file)
         self.export_dpi = export_dpi
 

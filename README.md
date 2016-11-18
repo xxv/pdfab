@@ -35,16 +35,16 @@ Example
 
 To run the example, simply do:
 
-    ./pdfab.py test/namecard.svg test.json
+    ./pdfab.py namecard.svg test.json
 
-This will look for `namecard.svg` in the `test/templates/` directory (this is a
-Jinja2 thing) and generate a PDF for every item in the `test.json` file.
+This will read `namecard.svg` and generate a PDF for every item in the
+`test.json` file.
 
 License
 -------
 
 PDFab — churn out hundreds of beautiful templated PDFs  
-Copyright (C) 2015  Steve Pomeroy <steve@staticfree.info>
+Copyright (C) 2015-2016  Steve Pomeroy <steve@staticfree.info>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

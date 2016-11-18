@@ -4,9 +4,13 @@ from pathlib import Path
 from pdfab import PDFab
 import json
 import sys
+from jinja2 import Environment, FileSystemLoader
 
 svg_path = Path(sys.argv[1])
-p = PDFab(svg_path.parent.as_posix(), svg_path.name)
+path = svg_path.parent.absolute().as_posix()
+print("Attempting to load from {:s}".format(path))
+environment = Environment(loader = FileSystemLoader(path))
+p = PDFab(environment, svg_path.name)
 
 param_list = json.load(open(sys.argv[2]))
 
